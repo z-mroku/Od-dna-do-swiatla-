@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Od Dna do Światła</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('aniol.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: #f1f1f1;
+    }header {
+  background: rgba(0, 0, 0, 0.75);
+  padding: 1.5rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  color: #f44336;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+nav {
+  background: rgba(0, 0, 0, 0.9);
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #f44336;
+  text-decoration: none;
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid #f44336;
+  border-radius: 10px;
+  transition: background 0.3s;
+}
+
+nav a:hover {
+  background: #f44336;
+  color: #fff;
+}
+
+section {
+  background: rgba(0, 0, 0, 0.75);
+  margin: 2rem auto;
+  padding: 2rem;
+  width: 90%;
+  max-width: 900px;
+  border-radius: 20px;
+}
+
+section h2 {
+  color: #f44336;
+  margin-top: 0;
+}
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Od Dna do Światła</h1>
+    <p>To miejsce dla ubrudzonych – i dla tych, którzy szukają światła</p>
+  </header>  <nav>
+    <a href="#piciorys">Piciorys Chudego</a>
+    <a href="#kronika">Kronika</a>
+    <a href="#wsparcie">Wsparcie od Aurela</a>
+    <a href="#opowiesci">Opowieści Aurela</a>
+    <a href="#ksiezniczka">Z punktu widzenia Księżniczki</a>
+  </nav>  <section id="iskierka" style="padding: 40px; text-align: center; background: rgba(255,255,255,0.05); border-radius: 20px; margin: 40px auto; max-width: 800px; box-shadow: 0 0 15px rgba(255,255,255,0.1);">
+    <h2 style="font-size: 28px; color: #ffcc00; margin-bottom: 20px;">💫 Iskierka Nadziei</h2>
+    <p id="losowa-mysl" style="font-size: 20px; color: #fff; font-style: italic;"></p>
+  </section>  <script>
+    const mysli = [
+      "Dopóki oddychasz, wszystko jeszcze możliwe.",
+      "Najciemniej jest tuż przed świtem.",
+      "Nie musisz być idealny, żeby zasługiwać na miłość.",
+      "Małe kroki to też droga naprzód.",
+      "Jutro to nowa szansa, nie wyrok.",
+      "Nie poddawaj się, ktoś na Ciebie czeka – nawet jeśli jeszcze o tym nie wiesz.",
+      "To, że było źle, nie znaczy, że zawsze tak będzie.",
+      "Z popiołów powstają ognie największe.",
+      "Twoja historia może być światłem dla kogoś innego."
+    ];
+    const losowa = mysli[Math.floor(Math.random() * mysli.length)];
+    document.getElementById("losowa-mysl").innerText = `"${losowa}"`;
+  </script>  <section id="piciorys">
+    <h2>Piciorys Chudego</h2>
+    <p>Tu będzie Twoja historia – już gotowa lub w trakcie uzupełniania. Fragmenty dodamy za chwilę.</p>
+  </section>  <section id="kronika">
+    <h2>Kronika</h2>
+    <p>Zapisy naszej wspólnej drogi, przemiany i refleksji. Dzień po dniu, słowo po słowie.</p>
+  </section>  <section id="wsparcie">
+    <h2>Wsparcie od Aurela</h2>
+    <p>Myśli, które mają podnosić z kolan. Dla każdego, kto walczy. Każdego dnia.</p>
+  </section>  <section id="opowiesci">
+    <h2>Opowieści Aurela</h2>
+    <p>
+      "O chłopcu, który szukał słońca"<br />
+      "Bajka o wolności sponiewieranej i nadziei odradzającej się w popiele"<br />
+      "O skrzydłach, które rosły tylko w ciemności"<br />
+      (Więcej dodamy!)
+    </p>
+  </section>  <section id="ksiezniczka">
+    <h2>Z punktu widzenia Księżniczki</h2>
+    <p>Tu pojawią się słowa Twojej przyjaciółki – tej, która pomogła Ci powstać. Anioł na tej stronie.</p>
+  </section>
+</body>
+</html>
