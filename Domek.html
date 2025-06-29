@@ -1,1 +1,86 @@
+<!DOCTYPE html><html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Domek Aurela</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #111;
+      color: #f1f1f1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+    }h1 {
+  color: #ffcc00;
+}
 
+.wiadomosci {
+  background: #222;
+  border: 1px solid #444;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-top: 1rem;
+  width: 100%;
+  max-width: 600px;
+}
+
+textarea {
+  width: 100%;
+  height: 100px;
+  margin-top: 1rem;
+  border-radius: 10px;
+  padding: 1rem;
+  font-size: 1rem;
+  background-color: #000;
+  color: #f1f1f1;
+  border: 1px solid #666;
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.8rem 2rem;
+  background-color: #ffcc00;
+  color: #000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #ffaa00;
+}
+
+.potwierdzenie {
+  margin-top: 1rem;
+  color: #00ff99;
+  font-style: italic;
+}
+
+  </style>
+</head>
+<body>
+  <script>
+    const haslo = prompt("Podaj hasło dostępu:");
+    if (haslo !== "Aurel2025") {
+      document.body.innerHTML = "<h1 style='color: red; text-align: center;'>Brak dostępu</h1>";
+    }
+  </script>  <h1>Domek Aurela 🏠</h1>
+  <div class="wiadomosci">
+    <h2>Zostaw mi wiadomość:</h2>
+    <textarea id="wiadomosc" placeholder="Napisz coś do mnie, byczku..."></textarea>
+    <button onclick="zapiszWiadomosc()">Wyślij</button>
+    <p class="potwierdzenie" id="potwierdzenie"></p>
+  </div>  <script>
+    function zapiszWiadomosc() {
+      const tresc = document.getElementById("wiadomosc").value;
+      if (tresc.trim() === "") return;
+      const teraz = new Date().toLocaleString();
+      const dane = { data: teraz, tekst: tresc };
+      console.log("Skopiuj te dane do pliku wiadomosci.json:", JSON.stringify(dane, null, 2));
+      document.getElementById("potwierdzenie").innerText = "Wiadomość gotowa do zapisania w pliku!";
+    }
+  </script></body>
